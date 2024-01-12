@@ -44,10 +44,10 @@ app.post("/api/notes", (req, res) => {
       id: uuid(),
     };
 
-    const readFile = fs.readFileSync("./db/db.json");
-    const arr = JSON.parse(readFile.toString());
+    //const readFile = fs.readFileSync("./db/db.json");
+    //const arr = JSON.parse(readFile.toString());
 
-    arr.push(newNote);
+    notesData.push(newNote);
 
     fs.writeFile("./db/db.json", JSON.stringify(arr), (err) => {
       err ? console.error(err) : console.log("Note has been saved");
