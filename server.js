@@ -6,7 +6,7 @@ const path = require("path");
 // Initialize an instance of Express.js
 const app = express();
 // Specify on which port the Express.js server will run
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 const notesData = require("./db/db.json");
 
