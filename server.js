@@ -58,7 +58,6 @@ app.post("/api/notes", (req, res) => {
       body: newNote,
     };
     console.log(response);
-    req.status(201).json(response);
   } else {
     res.status(500).json("Error saving new note");
   }
