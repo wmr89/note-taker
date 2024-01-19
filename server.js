@@ -49,7 +49,7 @@ app.post("/api/notes", (req, res) => {
 
     notesData.push(newNote);
 
-    fs.writeFile("./db/db.json", JSON.stringify(arr), (err) => {
+    fs.writeFile("./db/db.json", JSON.stringify(notesData), (err) => {
       err ? console.error(err) : console.log("Note has been saved");
     });
 
